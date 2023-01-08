@@ -32,7 +32,7 @@ app.get('/profile/:id', (req, res) => {handleProfileGet(req, res, db)})
 app.post('/imageUrl', (req, res) => {handleApiCall(req, res)})
 app.put('/image', (req, res) => {handleImagePut(req, res, db)})
 
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log(`Listing on port: ${PORT}`)
 })
 
