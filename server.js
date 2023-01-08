@@ -12,11 +12,8 @@ import handleApiCall from './Controllers/imageUrl.js';
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      port : 5432,
-      user : 'coder',
-      password : '',
-      database : 'smart-brian'
+      host: process.env.DATABASE_URL,
+      ssl: true,
     }
   });
 
